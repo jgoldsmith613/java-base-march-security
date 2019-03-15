@@ -1,0 +1,13 @@
+kind: "BuildConfig"
+apiVersion: "v1"
+metadata:
+  name: "java-base-layer-pipeline"
+spec:
+  source:
+    type: "Git"
+    git:
+      uri: "https://github.com/jgoldsmith613/java-base-march-security.git"
+  strategy:
+    type: "JenkinsPipeline"
+    jenkinsPipelineStrategy:
+      jenkinsfilePath: "Jenkinsfile"
