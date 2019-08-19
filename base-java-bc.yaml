@@ -8,7 +8,7 @@ spec:
   output:
     to:
       kind: DockerImage
-      name: quay-enterprise-quay-enterprise.apps.andy-e2.casl-contrib.osp.rht-labs.com/admin/java-base-layer:1-1
+      name: example-quayecosystem-quay-quay-enterprise.apps.cluster-adaf.sandbox508.opentlc.com/quay/java-base-layer:1-1
   postCommit: {}
   resources: {}
   runPolicy: Serial

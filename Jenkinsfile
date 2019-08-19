@@ -139,7 +139,7 @@ pipeline {
        steps {
            script{
                openshift.withCluster() {
-                   sh " oc import-image ${APP_NAME}:${tag} --from=${quayURL}/${repo}:${tag}"
+                   sh " oc import-image ${APP_NAME}:${tag} --from=${quayURL}/${repo}:${tag} --insecure=true"
                    obj = "${APP_NAME}-${env.BUILD_NUMBER}"
                    created = openshift.create(openshift.process(template, "-p IMAGE_SIGNING_REQUEST_NAME=${obj} -p IMAGE_STREAM_TAG=${APP_NAME}:${tag}"))
 
