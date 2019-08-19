@@ -5,8 +5,8 @@ openshift.withCluster() {
 }
 
 def template = "https://raw.githubusercontent.com/redhat-cop/image-scanning-signing-service/master/examples/image-signing-request-template.yml"
-def quayURL = "quay-enterprise-quay-enterprise.apps.andy-e2.casl-contrib.osp.rht-labs.com"
-def repo = "admin/${APP_NAME}"
+def quayURL = "example-quayecosystem-quay-quay-enterprise.apps.cluster-adaf.sandbox508.opentlc.com"
+def repo = "quay/${APP_NAME}"
 
 pipeline {
   agent { label 'maven' }
