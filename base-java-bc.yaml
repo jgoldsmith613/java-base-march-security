@@ -8,7 +8,9 @@ spec:
   output:
     to:
       kind: DockerImage
-      name: quayecosystem-quay-quay.apps.cluster-nyc-ea98.nyc-ea98.example.opentlc.com/security/java-base-layer:1-1
+      name: example-quayecosystem-quay-quay.apps.cluster-nyc-ea98.nyc-ea98.example.opentlc.com/security/java-base-layer:1-1
+    pushSecret:
+      name: "security-openshift-pull-secret"
   postCommit: {}
   resources: {}
   runPolicy: Serial

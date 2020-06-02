@@ -5,7 +5,7 @@ openshift.withCluster() {
 }
 
 def template = "https://raw.githubusercontent.com/jgoldsmith613/java-base-march-security/master/signing-template.yaml"
-def quayURL = "quayecosystem-quay-quay.apps.cluster-nyc-ea98.nyc-ea98.example.opentlc.com"
+def quayURL = "example-quayecosystem-quay-quay.apps.cluster-nyc-ea98.nyc-ea98.example.opentlc.com"
 def repo = "security/${APP_NAME}"
 
 pipeline {
