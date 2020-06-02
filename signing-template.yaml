@@ -14,7 +14,8 @@ objects:
     containerImage:
       kind: ImageStreamTag
       name: "${IMAGE_STREAM_TAG}"
-    pullSecret: "security-openshift-pull-secret"
+    pullSecret: 
+      name: "security-openshift-pull-secret"
 parameters:
 - name: IMAGE_SIGNING_REQUEST_NAME
   displayName: Image Signing Request Name

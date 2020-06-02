@@ -65,7 +65,7 @@ pipeline {
       steps{
          script {
              tag = image.replaceAll("^.+?:","")
-             tagInfo = httpRequest ignoreSslErrors:true, url:"http://${quayURL}/api/v1/repository/${repo}/tag/${tag}/images", authentication: 'quay'
+             tagInfo = httpRequest ignoreSslErrors:true, url:"http://${quayURL}/api/v1/repository/${repo}/tag/${tag}/images"
              tagInfo = readJSON text: tagInfo.content
              index_max = -1
              for( imageRef in tagInfo.images ) {
@@ -79,7 +79,7 @@ pipeline {
 
                  waitUntil() {
 
-			     vulns = httpRequest ignoreSslErrors:true, url:"https://${quayURL}/api/v1/repository/${repo}/image/${imageId}/security?vulnerabilities=true", authentication: 'quay'
+			     vulns = httpRequest ignoreSslErrors:true, url:"https://${quayURL}/api/v1/repository/${repo}/image/${imageId}/security?vulnerabilities=true"
 			     vulns = readJSON text: vulns.content  
 			     if(vulns.status != "scanned"){
 				 return false
