@@ -4,9 +4,9 @@ openshift.withCluster() {
   echo "begin build of " + env.APP_NAME
 }
 
-def template = "https://raw.githubusercontent.com/redhat-cop/image-scanning-signing-service/master/examples/image-signing-request-template.yml"
-def quayURL = "example-quayecosystem-quay-quay-enterprise.apps.cluster-adaf.sandbox508.opentlc.com"
-def repo = "quay/${APP_NAME}"
+def template = "https://raw.githubusercontent.com/jgoldsmith613/java-base-march-security/master/signing-template.yaml"
+def quayURL = "quayecosystem-quay-quay.apps.cluster-nyc-ea98.nyc-ea98.example.opentlc.com"
+def repo = "security/${APP_NAME}"
 
 pipeline {
   agent { label 'maven' }
